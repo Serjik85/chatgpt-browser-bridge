@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+
+.venv/
+.env
+
+last_openclaw_payload.json
+
+*.log
+*.tmp
+
+.vscode/
+.idea/
