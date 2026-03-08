@@ -1,0 +1,17 @@
+[Unit]
+Description=ChatGPT Proxy for OpenClaw
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=serhii
+WorkingDirectory=/home/serhii/chatgpt-bridge
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/serhii/chatgpt-bridge/.venv/bin/uvicorn chatgpt_proxy:app --host 0.0.0.0 --port 8080 --log-level info
+Restart=always
+RestartSec=3
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target
