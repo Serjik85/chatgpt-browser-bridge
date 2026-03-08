@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Chromium ChatGPT Debug
+Exec=chromium --remote-debugging-port=9222 https://chatgpt.com
+X-GNOME-Autostart-enabled=true
