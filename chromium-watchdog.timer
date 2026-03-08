@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Chromium watchdog every minute
+
+[Timer]
+OnBootSec=30
+OnUnitActiveSec=60
+Unit=chromium-watchdog.service
+
+[Install]
+WantedBy=timers.target
