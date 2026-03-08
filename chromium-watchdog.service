@@ -1,0 +1,9 @@
+[Unit]
+Description=Chromium Remote Debug Watchdog
+After=graphical.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=serhii
+ExecStart=/home/serhii/chatgpt-bridge/chromium_watchdog.sh
